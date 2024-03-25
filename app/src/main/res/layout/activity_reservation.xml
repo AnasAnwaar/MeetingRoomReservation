@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/editTextReservedFor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Reserved for"
+        android:inputType="text" />
+
+    <Spinner
+        android:id="@+id/spinnerRoomNo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextReservedFor"
+        android:layout_marginTop="16dp" />
+
+    <Spinner
+        android:id="@+id/spinnerMeetingType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spinnerRoomNo"
+        android:layout_marginTop="16dp" />
+
+    <EditText
+        android:id="@+id/editTextMeetingAgenda"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spinnerMeetingType"
+        android:layout_marginTop="16dp"
+        android:hint="Meeting agenda"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/editTextDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextMeetingAgenda"
+        android:layout_marginTop="16dp"
+        android:hint="Date"
+        android:focusable="false" />
+
+    <EditText
+        android:id="@+id/editTextTiming"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextDate"
+        android:layout_marginTop="16dp"
+        android:hint="Timing"
+        android:inputType="text" />
+
+    <Button
+        android:id="@+id/buttonReserve"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextTiming"
+        android:layout_marginTop="32dp"
+        android:text="Reserve" />
+
+</RelativeLayout>

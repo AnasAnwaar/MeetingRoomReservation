@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".UserRegistrationActivity">
+
+    <EditText
+        android:id="@+id/editTextName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:hint="Name"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/editTextEmployeeId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextName"
+        android:layout_marginBottom="16dp"
+        android:hint="Employee ID"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/editTextDepartment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextEmployeeId"
+        android:layout_marginBottom="16dp"
+        android:hint="Department"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/editTextDesignation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextDepartment"
+        android:layout_marginBottom="16dp"
+        android:hint="Designation"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/editTextContactNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextDesignation"
+        android:layout_marginBottom="16dp"
+        android:hint="Contact Number"
+        android:inputType="phone" />
+
+    <EditText
+        android:id="@+id/editTextCompanyEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextContactNumber"
+        android:layout_marginBottom="16dp"
+        android:hint="Company Email"
+        android:inputType="textEmailAddress" />
+
+    <EditText
+        android:id="@+id/editTextPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextCompanyEmail"
+        android:layout_marginBottom="16dp"
+        android:hint="Password"
+        android:inputType="textPassword" />
+
+    <Button
+        android:id="@+id/buttonRegister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextPassword"
+        android:text="Register" />
+
+</RelativeLayout>

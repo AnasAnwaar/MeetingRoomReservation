@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">MeetingRoomReservation</string>
+    <!-- Define the meeting types array -->
+    <string-array name="meeting_types_array">
+        <item>Internal Meeting</item>
+        <item>External Meeting</item>
+        <item>Combination of both</item>
+    </string-array>
+</resources>
