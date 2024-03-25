@@ -10,24 +10,24 @@ public class MyDBHelper extends SQLiteOpenHelper {
     public static final String DATABASE_NAME = "MyDatabase.db";
 
     // Define table and column names for users
-    private static final String TABLE_USERS = "users";
-    private static final String COLUMN_ID = "_id";
-    private static final String COLUMN_NAME = "name";
-    private static final String COLUMN_EMPLOYEE_ID = "employee_id";
-    private static final String COLUMN_DEPARTMENT = "department";
-    private static final String COLUMN_DESIGNATION = "designation";
-    private static final String COLUMN_CONTACT_NUMBER = "contact_number";
-    private static final String COLUMN_COMPANY_EMAIL = "company_email";
-    private static final String COLUMN_PASSWORD = "password";
+    static final String TABLE_USERS = "users";
+    static final String COLUMN_ID = "_id";
+    static final String COLUMN_NAME = "name";
+    static final String COLUMN_EMPLOYEE_ID = "employee_id";
+    static final String COLUMN_DEPARTMENT = "department";
+    static final String COLUMN_DESIGNATION = "designation";
+    static final String COLUMN_CONTACT_NUMBER = "contact_number";
+    static final String COLUMN_COMPANY_EMAIL = "company_email";
+    static final String COLUMN_PASSWORD = "password";
 
     // Define table and column names for reservations
-    private static final String TABLE_RESERVATIONS = "reservations";
-    private static final String COLUMN_RESERVED_FOR = "reserved_for";
-    private static final String COLUMN_ROOM_NO = "room_no";
-    private static final String COLUMN_MEETING_TYPE = "meeting_type";
-    private static final String COLUMN_AGENDA = "agenda";
-    private static final String COLUMN_DATE = "date";
-    private static final String COLUMN_TIMING = "timing";
+    static final String TABLE_RESERVATIONS = "reservations";
+    static final String COLUMN_RESERVED_FOR = "reserved_for";
+    static final String COLUMN_ROOM_NO = "room_no";
+    static final String COLUMN_MEETING_TYPE = "meeting_type";
+    static final String COLUMN_AGENDA = "agenda";
+    static final String COLUMN_DATE = "date";
+    static final String COLUMN_TIMING = "timing";
 
     private static final String SQL_CREATE_USERS_TABLE =
             "CREATE TABLE " + TABLE_USERS + " (" +
