@@ -38,7 +38,8 @@ public class UserLoginActivity extends AppCompatActivity {
                 if (authenticateUser(employeeId, password)) {
                     // Authentication successful
                     Toast.makeText(UserLoginActivity.this, "Login Successful", Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(UserLoginActivity.this, ReservationActivity.class);
+                    Intent intent = new Intent(UserLoginActivity.this, UserDashboardActivity.class);
+                    startActivity(intent);
                 } else {
                     // Authentication failed
                     Toast.makeText(UserLoginActivity.this, "Invalid Employee ID or Password", Toast.LENGTH_SHORT).show();
