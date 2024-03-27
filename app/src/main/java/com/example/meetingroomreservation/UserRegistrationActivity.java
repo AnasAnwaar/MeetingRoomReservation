@@ -1,11 +1,13 @@
 package com.example.meetingroomreservation;
 import android.content.ContentValues;
+import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
 import androidx.appcompat.app.AppCompatActivity;
 import android.view.View;
+import android.widget.Toast;
 
 public class UserRegistrationActivity extends AppCompatActivity {
     private EditText editTextName, editTextEmployeeId, editTextDepartment, editTextDesignation, editTextContactNumber, editTextCompanyEmail, editTextPassword;
@@ -41,6 +43,9 @@ public class UserRegistrationActivity extends AppCompatActivity {
 
                 // Add user to database
                 registerUser(name, employeeId, department, designation, contactNumber, companyEmail, password);
+                Toast.makeText(getApplicationContext(),"User Registered Successfully",Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(UserRegistrationActivity.this, UserLoginActivity.class);
+                startActivity(intent);
             }
         });
     }

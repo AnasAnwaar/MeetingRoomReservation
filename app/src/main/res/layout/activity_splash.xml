@@ -14,6 +14,6 @@
         android:layout_centerHorizontal="true"
         android:layout_marginStart="-3dp"
         android:layout_marginEnd="0dp"
-        android:src="@drawable/Logo" />
+        android:src="@drawable/logo" />
 
 </RelativeLayout>

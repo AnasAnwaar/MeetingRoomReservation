@@ -65,7 +65,7 @@
             android:layout_height="wrap_content"
             android:text="Approve"
             android:layout_weight="1"
-            android:backgroundTint="@color/colorApprove" />
+            android:backgroundTint="@color/black" />
 
         <Button
             android:id="@+id/buttonDecline"
@@ -73,7 +73,7 @@
             android:layout_height="wrap_content"
             android:text="Decline"
             android:layout_weight="1"
-            android:backgroundTint="@color/colorDecline" />
+            android:backgroundTint="@color/black" />
 
         <Button
             android:id="@+id/buttonEdit"
@@ -81,7 +81,7 @@
             android:layout_height="wrap_content"
             android:text="Edit"
             android:layout_weight="1"
-            android:backgroundTint="@color/colorEdit" />
+            android:backgroundTint="@color/black" />
     </LinearLayout>
 
 </LinearLayout>

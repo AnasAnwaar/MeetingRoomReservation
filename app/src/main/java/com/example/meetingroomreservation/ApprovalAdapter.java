@@ -66,7 +66,7 @@ public class ApprovalAdapter extends BaseAdapter {
         viewHolder.textViewRoomNo.setText(reservation.getRoomNo());
         viewHolder.textViewMeetingType.setText(reservation.getMeetingType());
         viewHolder.textViewAgenda.setText(reservation.getAgenda());
-        viewHolder.textViewDate.setText(reservation.getDate());
+        viewHolder.textViewDate.setText((CharSequence) reservation.getDate());
         viewHolder.textViewTiming.setText(reservation.getTiming());
 
         viewHolder.buttonApprove.setOnClickListener(new View.OnClickListener() {
@@ -134,7 +134,7 @@ public class ApprovalAdapter extends BaseAdapter {
         // Populate the edit dialog with reservation details
         editTextReservedFor.setText(reservation.getReservedFor());
         editTextMeetingAgenda.setText(reservation.getAgenda());
-        editTextDate.setText(reservation.getDate());
+        editTextDate.setText((CharSequence) reservation.getDate());
         editTextTiming.setText(reservation.getTiming());
 
         // Create and show the edit dialog
