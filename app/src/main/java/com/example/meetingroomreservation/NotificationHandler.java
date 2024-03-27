@@ -19,7 +19,9 @@ public class NotificationHandler {
 
         Notification.Builder builder = new Notification.Builder(context, CHANNEL_ID)
                 .setContentTitle(title)
-                .setContentText(message);
+                .setContentText(message)
+                .setSmallIcon(android.R.drawable.ic_dialog_info)
+                .setAutoCancel(true); // Automatically remove the notification when the user taps it
         notificationManager.notify(0, builder.build());
     }
 }
