@@ -40,6 +40,7 @@ public class UserLoginActivity extends AppCompatActivity {
                     Toast.makeText(UserLoginActivity.this, "Login Successful", Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(getApplicationContext(), UserDashboardActivity.class);
                     startActivity(intent);
+                    finish();
                 } else {
                     // Authentication failed
                     Toast.makeText(getApplicationContext(), "Invalid Employee ID or Password", Toast.LENGTH_LONG).show();

@@ -17,11 +17,13 @@ public class AdminDashboardActivity extends AppCompatActivity {
     public void onRoomStatusClick(View view) {
         Intent intent = new Intent(this, RoomStatusActivity.class);
         startActivity(intent);
+        finish();
     }
 
     // Called when "Approvals" button is clicked
     public void onApprovalsClick(View view) {
         Intent intent = new Intent(this, ApprovalsActivity.class);
         startActivity(intent);
+        finish();
     }
 }

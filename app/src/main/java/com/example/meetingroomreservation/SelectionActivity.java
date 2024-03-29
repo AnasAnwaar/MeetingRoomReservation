@@ -17,12 +17,14 @@ public class SelectionActivity extends AppCompatActivity {
     public void onAdminLoginClick(View view) {
         Intent intent = new Intent(this, AdminLoginActivity.class);
         startActivity(intent);
+        finish();
     }
 
     // Called when "Login as User" button is clicked
     public void onUserLoginClick(View view) {
         Intent intent = new Intent(this, UserLoginActivity.class);
         startActivity(intent);
+        finish();
     }
 
     // Called when "Make Display Device" button is clicked

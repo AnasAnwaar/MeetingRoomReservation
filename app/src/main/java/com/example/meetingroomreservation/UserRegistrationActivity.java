@@ -1,13 +1,18 @@
 package com.example.meetingroomreservation;
+
+import static androidx.core.content.ContextCompat.startActivity;
+
 import android.content.ContentValues;
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.text.TextUtils;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import androidx.appcompat.app.AppCompatActivity;
-import android.view.View;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class UserRegistrationActivity extends AppCompatActivity {
     private EditText editTextName, editTextEmployeeId, editTextDepartment, editTextDesignation, editTextContactNumber, editTextCompanyEmail, editTextPassword;
@@ -41,11 +46,19 @@ public class UserRegistrationActivity extends AppCompatActivity {
                 String companyEmail = editTextCompanyEmail.getText().toString().trim();
                 String password = editTextPassword.getText().toString().trim();
 
-                // Add user to database
-                registerUser(name, employeeId, department, designation, contactNumber, companyEmail, password);
-                Toast.makeText(getApplicationContext(),"User Registered Successfully",Toast.LENGTH_LONG).show();
-                Intent intent = new Intent(UserRegistrationActivity.this, UserLoginActivity.class);
-                startActivity(intent);
+                // Check if any field is empty
+                if (TextUtils.isEmpty(name) || TextUtils.isEmpty(employeeId) || TextUtils.isEmpty(department) || TextUtils.isEmpty(designation) ||
+                        TextUtils.isEmpty(contactNumber) || TextUtils.isEmpty(companyEmail) || TextUtils.isEmpty(password)) {
+                    // Display error message if any field is empty
+                    Toast.makeText(getApplicationContext(), "Please fill in all fields", Toast.LENGTH_SHORT).show();
+                } else {
+                    // Add user to database
+                    registerUser(name, employeeId, department, designation, contactNumber, companyEmail, password);
+                    Toast.makeText(getApplicationContext(), "User Registered Successfully", Toast.LENGTH_LONG).show();
+                    Intent intent = new Intent(UserRegistrationActivity.this, UserLoginActivity.class);
+                    startActivity(intent);
+                    finish();
+                }
             }
         });
     }

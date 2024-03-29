@@ -16,11 +16,13 @@ public class UserDashboardActivity extends AppCompatActivity {
     public void goToReservationActivity(View view) {
         Intent intent = new Intent(this, ReservationActivity.class);
         startActivity(intent);
+        finish();
     }
 
     // Method to navigate to the RoomStatusActivity
     public void goToRoomStatusActivity(View view) {
         Intent intent = new Intent(this, RoomStatusActivity.class);
         startActivity(intent);
+        finish();
     }
 }
