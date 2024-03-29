@@ -43,7 +43,7 @@ public class Reservation {
         return agenda;
     }
 
-    public Date getDate() {
+    public CharSequence getDate() {
         return date;
     }
 

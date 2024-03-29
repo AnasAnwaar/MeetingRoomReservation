@@ -152,6 +152,80 @@ public class MyDBHelper extends SQLiteOpenHelper {
         return pendingApprovals;
     }
 
+    // Method to retrieve reservations for a specific room on the current date
+    public List<Reservation> getReservationsForRoom(String roomNumber, String currentDate) {
+        List<Reservation> reservations = new ArrayList<>();
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        // Define the query to fetch reservations for the given room number and current date
+        String query = "SELECT * FROM " + TABLE_RESERVATIONS +
+                " WHERE " + COLUMN_ROOM_NO + " = ?" +
+                " AND " + COLUMN_DATE + " = ?";
+
+        // Selection arguments
+        String[] selectionArgs = {roomNumber, currentDate};
+
+        // Execute the query
+        Cursor cursor = db.rawQuery(query, selectionArgs);
+
+        if (cursor != null) {
+            try {
+                // Iterate through the cursor and retrieve reservation details
+                while (cursor.moveToNext()) {
+                    long id = cursor.getLong(cursor.getColumnIndex(COLUMN_ID));
+                    String reservedFor = cursor.getString(cursor.getColumnIndex(COLUMN_RESERVED_FOR));
+                    String meetingType = cursor.getString(cursor.getColumnIndex(COLUMN_MEETING_TYPE));
+                    String agenda = cursor.getString(cursor.getColumnIndex(COLUMN_AGENDA));
+                    Date date = parseDate(cursor.getString(cursor.getColumnIndex(COLUMN_DATE)));
+                    String timing = cursor.getString(cursor.getColumnIndex(COLUMN_TIMING));
+                    String status = cursor.getString(cursor.getColumnIndex(COLUMN_STATUS));
+
+                    // Create Reservation object and add it to the list
+                    Reservation reservation = new Reservation(id, reservedFor, roomNumber, meetingType, agenda, date, timing, status);
+                    reservations.add(reservation);
+                }
+            } finally {
+                cursor.close();
+            }
+        }
+
+        db.close();
+        return reservations;
+    }
+
+    // Method to check if a room is occupied at a given date and time
+    public boolean isRoomOccupied(String roomNumber, String currentDateTime) {
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        // Define the query to check if the room is occupied at the current date/time
+        String query = "SELECT COUNT(*) FROM " + TABLE_RESERVATIONS +
+                " WHERE " + COLUMN_ROOM_NO + " = ?" +
+                " AND " + COLUMN_DATE + " <= ?" +
+                " AND DATETIME(" + COLUMN_DATE + ", '+" + COLUMN_TIMING + " minutes') >= ?";
+
+        // Selection arguments
+        String[] selectionArgs = {roomNumber, currentDateTime, currentDateTime};
+
+        // Execute the query
+        Cursor cursor = db.rawQuery(query, selectionArgs);
+
+        int count = 0;
+        if (cursor != null) {
+            try {
+                if (cursor.moveToFirst()) {
+                    count = cursor.getInt(0);
+                }
+            } finally {
+                cursor.close();
+            }
+        }
+
+        db.close();
+
+        // If count > 0, room is occupied; otherwise, it's free
+        return count > 0;
+    }
+
     // Method to parse date string to Date object
     private Date parseDate(String dateString) {
         try {
@@ -187,5 +261,16 @@ public class MyDBHelper extends SQLiteOpenHelper {
     }
 
     public void updateReservationDetails(long id, String updatedReservedFor, String updatedMeetingAgenda, String updatedDate, String updatedTiming) {
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        ContentValues values = new ContentValues();
+        values.put(COLUMN_RESERVED_FOR, updatedReservedFor);
+        values.put(COLUMN_AGENDA, updatedMeetingAgenda);
+        values.put(COLUMN_DATE, updatedDate);
+        values.put(COLUMN_TIMING, updatedTiming);
+
+        // Updating the row
+        db.update(TABLE_RESERVATIONS, values, COLUMN_ID + " = ?", new String[]{String.valueOf(id)});
+        db.close();
     }
 }

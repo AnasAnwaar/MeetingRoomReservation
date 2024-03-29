@@ -29,7 +29,8 @@ public class SelectionActivity extends AppCompatActivity {
 
     // Called when "Make Display Device" button is clicked
     public void onDisplayDeviceClick(View view) {
-        // Implement the functionality to make a display device
-        // This can be done by starting a new activity or performing other actions
+        Intent intent = new Intent(this, DisplayScreenActivity.class);
+        startActivity(intent);
+        finish();
     }
 }
