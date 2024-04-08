@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
+    android:background="#032B8F"
     android:padding="16dp">
 
     <TextView
@@ -10,6 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Reserved For:"
+        android:textColor="@color/white"
         android:textSize="18sp"
         android:textStyle="bold" />
 
@@ -18,12 +20,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Room No:"
+        android:textColor="@color/white"
         android:textSize="18sp"
         android:textStyle="bold" />
 
     <TextView
         android:id="@+id/textViewMeetingType"
         android:layout_width="match_parent"
+        android:textColor="@color/white"
         android:layout_height="wrap_content"
         android:text="Meeting Type:"
         android:textSize="18sp"
@@ -34,6 +38,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Agenda:"
+        android:textColor="@color/white"
         android:textSize="18sp"
         android:textStyle="bold" />
 
@@ -42,6 +47,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Date:"
+        android:textColor="@color/white"
         android:textSize="18sp"
         android:textStyle="bold" />
 
@@ -50,6 +56,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Timing:"
+        android:textColor="@color/white"
         android:textSize="18sp"
         android:textStyle="bold" />
 
@@ -57,6 +64,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        android:background="#032B8F"
         android:layout_marginTop="16dp">
 
         <Button
@@ -65,7 +73,7 @@
             android:layout_height="wrap_content"
             android:text="Approve"
             android:layout_weight="1"
-            android:backgroundTint="@color/black" />
+            android:backgroundTint="#EA0505" />
 
         <Button
             android:id="@+id/buttonDecline"
@@ -73,7 +81,7 @@
             android:layout_height="wrap_content"
             android:text="Decline"
             android:layout_weight="1"
-            android:backgroundTint="@color/black" />
+            android:backgroundTint="#EA0505" />
 
         <Button
             android:id="@+id/buttonEdit"
@@ -81,7 +89,7 @@
             android:layout_height="wrap_content"
             android:text="Edit"
             android:layout_weight="1"
-            android:backgroundTint="@color/black" />
+            android:backgroundTint="#EA0505" />
     </LinearLayout>
 
 </LinearLayout>

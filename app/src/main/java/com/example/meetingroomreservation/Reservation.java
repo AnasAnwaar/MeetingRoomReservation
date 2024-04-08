@@ -44,7 +44,7 @@ public class Reservation {
     }
 
     public CharSequence getDate() {
-        return date;
+        return (CharSequence) date;
     }
 
     public String getTiming() {

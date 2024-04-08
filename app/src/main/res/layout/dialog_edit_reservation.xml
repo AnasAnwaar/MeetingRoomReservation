@@ -3,35 +3,45 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
+    android:background="#032B8F"
     android:padding="16dp">
 
     <EditText
         android:id="@+id/editTextReservedFor"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
         android:hint="Reserved For"/>
 
     <EditText
         android:id="@+id/editTextMeetingAgenda"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
         android:hint="Meeting Agenda"/>
 
     <EditText
         android:id="@+id/editTextDate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
         android:hint="Date"/>
 
     <EditText
         android:id="@+id/editTextTiming"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
         android:hint="Timing"/>
 
     <Button
         android:id="@+id/buttonSave"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:backgroundTint="#EA0505"
         android:text="Save"/>
 </LinearLayout>

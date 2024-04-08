@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp"
+    android:background="#032B8F"
     tools:context=".UserRegistrationActivity">
 
     <EditText
@@ -12,6 +13,8 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
         android:hint="Name"
+        android:textColorHint="@color/white"
+        android:textColor="@color/white"
         android:inputType="textPersonName" />
 
     <EditText
@@ -21,6 +24,8 @@
         android:layout_below="@id/editTextName"
         android:layout_marginBottom="16dp"
         android:hint="Employee ID"
+        android:textColorHint="@color/white"
+        android:textColor="@color/white"
         android:inputType="text" />
 
     <EditText
@@ -30,6 +35,8 @@
         android:layout_below="@id/editTextEmployeeId"
         android:layout_marginBottom="16dp"
         android:hint="Department"
+        android:textColorHint="@color/white"
+        android:textColor="@color/white"
         android:inputType="text" />
 
     <EditText
@@ -38,6 +45,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/editTextDepartment"
         android:layout_marginBottom="16dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
         android:hint="Designation"
         android:inputType="text" />
 
@@ -48,6 +57,8 @@
         android:layout_below="@id/editTextDesignation"
         android:layout_marginBottom="16dp"
         android:hint="Contact Number"
+        android:textColorHint="@color/white"
+        android:textColor="@color/white"
         android:inputType="phone" />
 
     <EditText
@@ -57,6 +68,8 @@
         android:layout_below="@id/editTextContactNumber"
         android:layout_marginBottom="16dp"
         android:hint="Company Email"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
         android:inputType="textEmailAddress" />
 
     <EditText
@@ -66,12 +79,15 @@
         android:layout_below="@id/editTextCompanyEmail"
         android:layout_marginBottom="16dp"
         android:hint="Password"
+        android:textColorHint="@color/white"
+        android:textColor="@color/white"
         android:inputType="textPassword" />
 
     <Button
         android:id="@+id/buttonRegister"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:backgroundTint="#EA0505"
         android:layout_below="@id/editTextPassword"
         android:text="Register" />
 

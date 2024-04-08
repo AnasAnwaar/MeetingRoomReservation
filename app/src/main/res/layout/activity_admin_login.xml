@@ -2,6 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#032B8F"
     android:padding="16dp">
 
     <EditText
@@ -9,6 +10,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Username"
+        android:backgroundTint="@color/white"
+        android:textColorHint="@color/white"
+        android:textColor="@color/white"
         android:layout_marginTop="100dp"/>
 
     <EditText
@@ -16,6 +20,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Password"
+        android:backgroundTint="@color/white"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
         android:layout_below="@id/editTextUsername"
         android:layout_marginTop="20dp"
         android:inputType="textPassword"/>
@@ -25,6 +32,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Login"
+        android:backgroundTint="#EA0505"
         android:layout_below="@id/editTextPassword"
         android:layout_marginTop="20dp"
         android:layout_centerHorizontal="true"

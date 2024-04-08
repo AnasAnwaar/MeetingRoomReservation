@@ -2,6 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#032B8F"
     android:padding="16dp">
 
     <EditText
@@ -9,12 +10,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Reserved for"
+        android:textColorHint="@color/white"
         android:inputType="text" />
 
     <Spinner
         android:id="@+id/spinnerRoomNo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/white"
         android:layout_below="@id/editTextReservedFor"
         android:layout_marginTop="16dp" />
 
@@ -22,6 +25,7 @@
         android:id="@+id/spinnerMeetingType"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/white"
         android:layout_below="@id/spinnerRoomNo"
         android:layout_marginTop="16dp" />
 
@@ -31,6 +35,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/spinnerMeetingType"
         android:layout_marginTop="16dp"
+        android:textColorHint="@color/white"
         android:hint="Meeting agenda"
         android:inputType="text" />
 
@@ -40,6 +45,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/editTextMeetingAgenda"
         android:layout_marginTop="16dp"
+        android:textColorHint="@color/white"
         android:hint="Date"
         android:focusable="false" />
 
@@ -49,6 +55,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/editTextDate"
         android:layout_marginTop="16dp"
+        android:textColorHint="@color/white"
         android:hint="Timing"
         android:inputType="text" />
 
@@ -58,6 +65,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/editTextTiming"
         android:layout_marginTop="32dp"
+        android:backgroundTint="#EA0505"
         android:text="Reserve" />
 
 </RelativeLayout>

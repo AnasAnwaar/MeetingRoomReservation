@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="#032B8F"
     android:gravity="center">
 
     <Button
@@ -11,6 +11,7 @@
         android:layout_height="wrap_content"
         android:text="Room Status"
         android:layout_marginBottom="20dp"
+        android:backgroundTint="#EA0505"
         android:layout_centerHorizontal="true"
         android:onClick="onRoomStatusClick"/>
 
@@ -18,6 +19,7 @@
         android:id="@+id/btnApprovals"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:backgroundTint="#EA0505"
         android:text="Approvals"
         android:layout_below="@id/btnRoomStatus"
         android:layout_marginBottom="20dp"
